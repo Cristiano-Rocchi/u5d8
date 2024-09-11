@@ -7,7 +7,8 @@ import lombok.*;
 
 
 @Entity
-@Data
+@Setter
+@Getter
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString

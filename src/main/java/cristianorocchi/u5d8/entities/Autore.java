@@ -8,6 +8,8 @@ import lombok.*;
 
 @Entity
 @Table(name = "Autori")
+@Setter
+@Getter
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
