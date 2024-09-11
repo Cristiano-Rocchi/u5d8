@@ -34,7 +34,7 @@ public class PostService {
         newPost.setTitolo(payload.getTitolo());
         newPost.setContenuto(payload.getContenuto());
         newPost.setTempoDiLettura(payload.getTempoDiLettura());
-        newPost.setCategoria(payload.getCategoria());  
+        newPost.setCategoria(payload.getCategoria());
         newPost.setCover(payload.getCover());
         newPost.setAutore(autore);
 

@@ -12,7 +12,7 @@ public class BlogPostPayload {
     private String contenuto;
     private int tempoDiLettura;
     private int autoreId;
-    private String categoria;  // Aggiungi il campo categoria
-    private String cover;      // Aggiungi il campo cover
+    private String categoria;
+    private String cover;
 }
 
