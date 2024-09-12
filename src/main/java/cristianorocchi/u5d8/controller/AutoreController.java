@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.IOException;
 import java.util.List;
 
 
@@ -64,7 +65,7 @@ public class AutoreController {
         autoreService.trovaPerIdECancella(autoreId);
     }
     @PostMapping("/{autoreId}/avatar")
-    public void uploadAvatar(@RequestParam("avatar")MultipartFile image){
-        System.out.println(image.getName());
+    public void uploadAvatar(@RequestParam("avatar")MultipartFile image) throws IOException {
+        this.autoreService.uploadImage(image);
     }
 }
