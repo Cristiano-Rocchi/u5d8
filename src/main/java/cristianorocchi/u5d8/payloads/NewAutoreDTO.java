@@ -1,15 +1,11 @@
 package cristianorocchi.u5d8.payloads;
-
-
-
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Size;
 
 public record NewAutoreDTO(
 
-
-        @NotEmpty (message = "Il nome dell'autore è obbligatorio")
+        @NotEmpty(message = "Il nome dell'autore è obbligatorio")
         @Size(min = 2, max = 40, message = "Il nome dell'autore deve essere compreso tra 2 e 40 caratteri")
         String nome,
 

@@ -10,6 +10,18 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+
+
+import cristianorocchi.u5d8.entities.Autore;
+import cristianorocchi.u5d8.payloads.NewAutoreDTO;
+import cristianorocchi.u5d8.services.AutoreService;
+import jakarta.validation.Valid;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
 @RestController
 @RequestMapping("/autori")
 public class AutoreController {
@@ -51,4 +63,3 @@ public class AutoreController {
         autoreService.trovaPerIdECancella(autoreId);
     }
 }
-
