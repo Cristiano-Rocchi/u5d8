@@ -19,6 +19,7 @@ import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 
@@ -61,5 +62,9 @@ public class AutoreController {
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteAutoreById(@PathVariable int autoreId) {
         autoreService.trovaPerIdECancella(autoreId);
+    }
+    @PostMapping("/{autoreId/avatar}")
+    public void uploadAvatar(@RequestParam("avatar")MultipartFile image){
+        System.out.println(image.getName());
     }
 }
