@@ -65,7 +65,8 @@ public class AutoreController {
         autoreService.trovaPerIdECancella(autoreId);
     }
     @PostMapping("/{autoreId}/avatar")
-    public void uploadAvatar(@RequestParam("avatar")MultipartFile image) throws IOException {
-        this.autoreService.uploadImage(image);
+    public Autore uploadAvatar(@PathVariable int autoreId, @RequestParam("avatar") MultipartFile image) throws IOException {
+        return this.autoreService.uploadImage(autoreId, image);
     }
+
 }

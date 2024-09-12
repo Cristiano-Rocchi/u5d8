@@ -52,9 +52,20 @@ public class AutoreService {
         autoreRepository.delete(autore);
     }
 
-    public void uploadImage(MultipartFile file) throws IOException {
-       String url=(String) cloudinaryUploader.uploader().upload(file.getBytes(), ObjectUtils.emptyMap()).get("url");
+    public Autore uploadImage(int autoreId, MultipartFile file) throws IOException {
+
+        String url = (String) cloudinaryUploader.uploader().upload(file.getBytes(), ObjectUtils.emptyMap()).get("url");
         System.out.println("URL------>" + url);
+
+
+        Autore autore = trovaPerId(autoreId);
+
+
+        autore.setAvatar(url);
+
+        
+        return autoreRepository.save(autore);
     }
+
 }
 
