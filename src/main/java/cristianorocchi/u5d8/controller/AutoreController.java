@@ -63,7 +63,7 @@ public class AutoreController {
     public void deleteAutoreById(@PathVariable int autoreId) {
         autoreService.trovaPerIdECancella(autoreId);
     }
-    @PostMapping("/{autoreId/avatar}")
+    @PostMapping("/{autoreId}/avatar")
     public void uploadAvatar(@RequestParam("avatar")MultipartFile image){
         System.out.println(image.getName());
     }
